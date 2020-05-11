@@ -7,13 +7,14 @@ function TodoForm({ state, dispatch }) {
 	}
 
 	const handleSubmit = e => {
-		dispatch({});
+		e.preventDefault();
+		dispatch({ type: 'HANDLE_SUBMIT' });
 	}
 
 	return (
-		<form className='todo-form'>
-			<input onChange={handleChanges} type='text' name='todoInput' placeholder='Enter Todo Item'/>
-			<button>Add Item</button>
+		<form onSubmit={handleSubmit} className='todo-form'>
+			<input value={state.addItemInput} onChange={handleChanges} type='text' name='todoInput' placeholder='Enter Todo Item'/>
+			<button onClick={handleSubmit}>Add Item</button>
 		</form>
 	);
 }

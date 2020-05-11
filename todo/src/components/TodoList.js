@@ -16,7 +16,7 @@ function TodoList() {
 					return <Todo key={item.id} task={item}/>
 				})
 			}
-			<TodoForm dispatch={dispatch}/>
+			<TodoForm state={state} dispatch={dispatch}/>
 		</div>
 	);
 }
