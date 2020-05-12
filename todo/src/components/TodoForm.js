@@ -11,10 +11,16 @@ function TodoForm({ state, dispatch }) {
 		dispatch({ type: 'HANDLE_SUBMIT' });
 	}
 
+	const clearComplete = e => {
+		e.preventDefault();
+		dispatch({ type: 'CLEAR_COMPLETE' })
+	}
+
 	return (
 		<form onSubmit={handleSubmit} className='todo-form'>
 			<input value={state.addItemInput} onChange={handleChanges} type='text' name='todoInput' placeholder='Enter Todo Item'/>
 			<button onClick={handleSubmit}>Add Item</button>
+			<button onClick={clearComplete}>Clear Completed</button>
 		</form>
 	);
 }

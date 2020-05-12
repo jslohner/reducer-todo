@@ -40,6 +40,11 @@ export const reducer = (state, action) => {
 				...state,
 				taskList: state.taskList.map(task => action.payload === task ? {...task, completed: !task.completed} : task)
 			};
+		case 'CLEAR_COMPLETE':
+			return {
+				...state,
+				taskList: state.taskList.filter(task => !task.completed)
+			};
 		default:
 			return state;
 	}
