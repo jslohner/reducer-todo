@@ -1,11 +1,75 @@
 .App {
 	text-align: center;
+	display: flex;
+	margin: 2%;
+	flex-direction: column;
+}
+
+.todo-list {
+	display: flex;
+	flex-direction: column;
+	background-color: crimson;
+	border: 4px solid black;
+	border-radius: 4rem;
+	margin: 2%;
+	font-size: 2rem
+}
+
+.todo-form {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	font-size: 2rem;
+	background-color: crimson;
+	border: 4px solid black;
+	border-radius: 4rem;
+	margin: 2%;
+	padding: 4%;
+}
+
+.todo-form input {
+	width: 50%;
+	margin: 2%;
+	font-size: 1.3rem;
+	text-align: center;
+	border-color: black;
+	outline: none;
+}
+
+.todo-form button {
+	width: 20%;
+	margin: 0.5%;
+	font-size: 1.3rem;
+	border-color: black;
+	border-radius: 2rem;
+	outline: none;
+	cursor: pointer;
+}
+
+.todo-form button:hover {
+	color: white;
+	background-color: indigo;
+}
+
+.task {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	margin: 0 auto;
 }
 
 .todo-item {
 	cursor: pointer;
+	margin: 4%;
+	padding: 2%;
+	border: 2px solid black;
+	background-color: white;
+	width: 20%;
 }
 
 .todo-item.completed {
 	text-decoration: line-through;
+	color: white;
+	background-color: black;
+	border-color: white;
 }
