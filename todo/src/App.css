@@ -7,12 +7,17 @@
 
 .todo-list {
 	display: flex;
-	flex-direction: column;
+	flex-flow: row wrap;
 	background-color: crimson;
 	border: 4px solid black;
 	border-radius: 4rem;
 	margin: 2%;
+	padding: 2%;
 	font-size: 2rem
+}
+
+.todo-list h2 {
+	width: 100%;
 }
 
 .todo-form {
@@ -54,21 +59,22 @@
 .task {
 	display: flex;
 	justify-content: center;
-	width: 100%;
+	width: 30%;
 	margin: 0 auto;
 }
 
 .todo-item {
 	cursor: pointer;
-	margin: 4%;
+	margin: 5%;
 	padding: 2%;
 	border: 2px solid black;
+	border-radius: 2rem;
 	background-color: white;
-	width: 20%;
+	width: 100%;
 }
 
 .todo-item.completed {
-	text-decoration: line-through;
+	/* text-decoration: line-through; */
 	color: white;
 	background-color: black;
 	border-color: white;
