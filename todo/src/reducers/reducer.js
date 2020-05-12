@@ -13,14 +13,7 @@ export const reducer = (state, action) => {
 		case 'HANDLE_SUBMIT':
 			return {
 				...state,
-				taskList: [
-					...state.taskList,
-						{
-							item: state.addItemInput,
-							completed: false,
-							id: Date.now()
-						}
-				],
+				taskList: (state.addItemInput ? [...state.taskList, { item: state.addItemInput, completed: false, id: Date.now() }] : []),
 				addItemInput: ''
 			};
 		case 'TOGGLE_COMPLETE':
@@ -49,9 +42,3 @@ export const reducer = (state, action) => {
 			return state;
 	}
 }
-
-// initTask: {
-// 	item: '',
-// 	completed: false,
-// 	id: ''
-// }
